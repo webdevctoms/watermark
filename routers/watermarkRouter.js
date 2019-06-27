@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Jimp = require("jimp");
+const fs = require('fs');
 
 router.get("/",(req,res) => {
 	let srcImg;
