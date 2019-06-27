@@ -3,8 +3,10 @@ const express = require('express');
 const {PORT} = require('./config');
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
+const {router:getImageRouter} = require("./routers/watermarkRouter");
 const app = express();
 app.use(jsonParser);
+app.use("/api",getImageRouter);
 let server;
 
 function runServer(port = PORT){
